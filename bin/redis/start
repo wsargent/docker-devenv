@@ -1,0 +1,10 @@
+
+	mkdir -p $APPS/redis/data
+	mkdir -p $APPS/redis/logs
+	REDIS=$(docker run \
+		-p 6379:6379 \
+		-v $APPS/redis/data:/data \
+		-v $APPS/redis/logs:/logs \
+		-d \
+		relateiq/redis)
+	echo "Started REDIS in container $REDIS"

@@ -1,0 +1,11 @@
+	mkdir -p $APPS/zookeeper/data
+	mkdir -p $APPS/zookeeper/logs
+	sudo docker rm zookeeper > /dev/null 2>&1
+	ZOOKEEPER=$(docker run \
+		-d \
+		-p 2181:2181 \
+		-v $APPS/zookeeper/logs:/logs \
+		-name zookeeper \
+		relateiq/zookeeper)
+	echo "Started ZOOKEEPER in container $ZOOKEEPER"
+

@@ -1,3 +1,1 @@
-```
-docker build -t jeffutter/riakcs github.com/jeffutter/riakcs-docker
-```
+From https://github.com/jeffutter/riakcs-docker

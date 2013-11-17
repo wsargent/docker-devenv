@@ -2,11 +2,12 @@
 FROM ubuntu:12.04
 ENV REFRESHED_AT 2013-11-16
 
-sed 's/main$/main universe/' -i /etc/apt/sources.list
+RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list
 RUN apt-get update
+RUN apt-get upgrade -y
 
 # Install common packages (from http://youtu.be/1Fm3MJhQZZg)
-run apt-get -y -q install aptitude sudo apt-utils ntp build-essential curl tzdata wget less dnsutils gzip netcat screen unzip sysstat git python-software-properties
+run apt-get -y -q install aptitude sudo apt-utils ntp build-essential curl tzdata wget less dnsutils gzip netcat screen unzip sysstat git python-software-properties vim zsh
 
 # set up timezone
 run echo 'Etc/UTC' > /etc/timezone

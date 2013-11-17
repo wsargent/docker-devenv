@@ -1,4 +1,4 @@
-FROM server:4444/base:latest
+FROM internal_registry:5000/base:latest
 
 RUN add-apt-repository ppa:webupd8team/java
 RUN apt-get update
