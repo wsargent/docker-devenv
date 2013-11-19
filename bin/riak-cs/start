@@ -1,1 +1,0 @@
-sudo docker run  -name riakcs -d -p 8000:8000 -p 8080:8080 -t internal_registry:5000/riak-cs

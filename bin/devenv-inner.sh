@@ -24,10 +24,12 @@ install(){
 	echo "Installing docker registry and images:"
 	cp /vagrant/etc/docker.conf /etc/init/docker.conf
 
-	./build_push.sh
+	/vagrant/bin/install.sh
 }
 
 start(){
+	cd /vagrant/containers
+	internal_registry/start
 	zookeeper/start
 	kafka/start
 	riak-cs/start
@@ -40,11 +42,7 @@ update(){
 	apt-get update
 	apt-get install -y lxc-docker
 
-	docker pull relateiq/zookeeper
-	docker pull relateiq/redis
-	docker pull relateiq/kafka
-	docker pull internal_registry:5000/riak-cs	
-	docker pull shipyard/shipyard
+    /vagrant/bin/update.sh
 }
 
 case "$1" in
@@ -67,6 +65,9 @@ case "$1" in
 	status)
 		docker ps
 		;;
+    install)
+        install
+        ;;
 	*)
 		echo $"Usage: $0 {start|stop|kill|update|restart|status|ssh}"
 		RETVAL=1

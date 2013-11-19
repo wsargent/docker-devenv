@@ -1,9 +1,10 @@
 #!/bin/bash
 
-SCRIPT_HOME="$( cd "$( dirname "$0" )" && pwd )"
-
 REGISTRY=internal_registry:5000
-IMAGES_PATH=$SCRIPT_HOME/images
+IMAGES_PATH=/vagrant/images
+
+# Pull the external images
+/vagrant/bin/update.sh
 
 # Use latest tag 
 for i in $(eval echo "base auth"); do
