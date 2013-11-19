@@ -77,3 +77,5 @@ in your Docker file.
 It is based on the Relate-IQ [Vagrantfile](https://github.com/relateiq/docker_public) from the [devenv blog post](http://blog.relateiq.com/a-docker-dev-environment-in-24-hours-part-2-of-2/) .
 
 Additional bits taken from [Mailgun shipper talk](http://www.rackspace.com/blog/how-mailgun-uses-docker-and-contributes-back/).
+
+Some concepts taken from [Phusion base image](https://github.com/phusion/baseimage-docker).

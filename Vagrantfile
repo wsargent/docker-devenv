@@ -52,9 +52,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         "sed -i -E 's#^exit 0#[ -x /root/guest_additions.sh ] \\&\\& /root/guest_additions.sh#' /etc/rc.local; " \
         "echo 'Installation of VBox Guest Additions is proceeding in the background.'; " \
         "echo '\"vagrant reload\" can be used in about 2 minutes to activate the new guest additions.'; "
-
-      # mounting error, try doing this.
-      # pkg_cmd << "gpasswd -a root vboxsf; "
     end
 
     # Add vagrant to the docker group, so we don't have to sudo everything.

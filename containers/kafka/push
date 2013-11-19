@@ -1,0 +1,6 @@
+#!/bin/bash
+
+NAME=kafka
+
+sudo docker commit $NAME internal_registry:5000/$NAME
+sudo docker push internal_registry:5000/$NAME
