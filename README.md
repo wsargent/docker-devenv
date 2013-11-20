@@ -48,9 +48,29 @@ Once the server has rebooted, you should have shipyard up.  The credentials are 
 
 ## Usage
 
+To start the server:
+
 ```
 vagrant up
 ./bin/devenv start
+```
+
+To push the local images to registry:
+
+```
+./bin/devenv push
+```
+
+To export the registry:
+
+```
+./bin/devenv export
+```
+
+To import registry:
+
+```
+./bin/devenv import
 ```
 
 ## Explanation

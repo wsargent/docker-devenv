@@ -27,8 +27,17 @@ install(){
 	/vagrant/bin/install.sh
 }
 
+push() {
+	echo "Pushing images to registry:"
+	
+	/vagrant/bin/push.sh
+}
+
 start(){
+    echo "Starting containers"
+
 	cd /vagrant/containers
+
 	internal_registry/start
 	zookeeper/start
 	kafka/start
@@ -38,11 +47,21 @@ start(){
 	sleep 1
 }
 
-update(){
+update() {
 	apt-get update
 	apt-get install -y lxc-docker
 
     /vagrant/bin/update.sh
+}
+
+imp() {
+    echo "Importing registry: DISABLED as import seems to miss CMD in the image"
+	# /vagrant/bin/import-repo.sh
+}
+
+exp() {
+    echo "Exporting registry:"
+	/vagrant/bin/export-repo.sh
 }
 
 case "$1" in
@@ -68,7 +87,16 @@ case "$1" in
     install)
         install
         ;;
+    push)
+		push
+		;;
+	imp)
+		imp
+		;;
+	exp)
+		exp
+		;;
 	*)
-		echo $"Usage: $0 {start|stop|kill|update|restart|status|ssh}"
+		echo $"Usage: $0 {start|stop|kill|update|restart|status|ssh|install|push|imp|exp}"
 		RETVAL=1
 esac
