@@ -2,6 +2,8 @@
 
 This is a one stop Vagrant for a docker based development environment.  It comes with riak-cs, scala, zookeeper, kafka, oracle-java7, playframework, and sbt, and probably a bunch more.  It will pull and set up images for absolutely everything.
 
+I recommend reading the [cheat sheet](https://gist.github.com/wsargent/7049221).
+
 ## Caution
 
 This is personalized for my use.  It's not guaranteed to work all the time. 
