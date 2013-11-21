@@ -1,4 +1,4 @@
-# Will's Docker Development Environment
+# Docker Development Environment
 
 This is a one stop Vagrant for a docker based development environment.  It comes with riak-cs, scala, zookeeper, kafka, oracle-java7, playframework, and sbt, and probably a bunch more.  It will pull and set up images for absolutely everything.
 
