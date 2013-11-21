@@ -57,7 +57,7 @@ vagrant reload
 
 ### Configure Shipyard
 
-Once the server has rebooted, you should have shipyard up.  The credentials are "shipyard/admin".
+Once the server has rebooted and you've waited for a bit, you should have Shipyard up.  The credentials are "shipyard/admin".
 
 * Go to [http://localhost:8005/hosts/](http://localhost:8005/hosts/) to see Shipyard's hosts.
 * In the vagrant VM, `ifconfig eth0` and look for "inet addr:10.0.2.15" -- enter the IP address.
@@ -84,7 +84,7 @@ To export the registry:
 ./bin/devenv export
 ```
 
-To import registry:
+To import registry (CURRENTLY BROKEN):
 
 ```
 ./bin/devenv import
