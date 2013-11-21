@@ -23,9 +23,9 @@ It also depends on a public registry image for the docker registry, so that's po
 
 ## Installation
 
-### Install Virtualbox, Vagrant, Docker, etc.
+### Install Virtualbox and Vagrant, etc.
 
-Read the [Docker Cheat Sheet](https://gist.github.com/wsargent/7049221) for how to install Docker.
+Read the [Docker Cheat Sheet](https://gist.github.com/wsargent/7049221) for how to install Vagrant.
 
 ### Run Vagrant 
 
