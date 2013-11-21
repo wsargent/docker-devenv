@@ -4,7 +4,20 @@ This is a one stop Vagrant for a docker based development environment.  It comes
 
 ## Caution
 
-This is personalized for my use: I recommend you clone your own copy, add this as `upstream` then use `git fetch upstream; git merge upstream/master` if you really want to follow it.  It's not guaranteed to work all the time.
+This is personalized for my use.  It's not guaranteed to work all the time. 
+
+I recommend you clone your own copy:
+
+```
+git remote add upstream https://github.com/wsargent/docker-devenv.git
+```
+
+then if you want to pull changes, do:
+
+```
+git fetch upstream; 
+git merge upstream/master;
+``` 
 
 It also depends on a public registry image for the docker registry, so that's possibly a security risk.
 
