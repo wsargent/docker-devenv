@@ -1,2 +1,4 @@
 .vagrant
 *.tar.gz
+*.sublime-project
+*.sublime-workspace
