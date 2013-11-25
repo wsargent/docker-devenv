@@ -27,9 +27,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.network :forwarded_port, :host => 2181, :guest => 2181
 
   # Set up a bunch of forwarded ports to expose docker containers through the host OS without hassle...
-  (49000..49900).each do |port|
-    config.vm.network :forwarded_port, :host => port, :guest => port
-  end
+  # (49000..49900).each do |port|
+  #  config.vm.network :forwarded_port, :host => port, :guest => port
+  #end
 
   # Provision docker and new kernel if deployment was not done.
   # It is assumed Vagrant can successfully launch the provider instance.
