@@ -1,0 +1,2 @@
+# -e ES_HOST=1.2.3.4 -e ES_PORT=9200
+docker run -link elasticsearch:ES -name KIBANA kibana

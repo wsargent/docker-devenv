@@ -17,6 +17,11 @@ for i in $(eval echo "oracle-java7"); do
   docker build -t="$REGISTRY/$i" .
 done;
 
+for i in $(eval echo "logstash kibana elasticsearch"); do
+  cd $IMAGES_PATH/$i
+  docker build -t="$REGISTRY/$i" .
+done;
+
 for i in $(eval echo "sbt"); do
   cd $IMAGES_PATH/$i
   docker build -t="$REGISTRY/$i" .
