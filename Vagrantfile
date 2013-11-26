@@ -26,6 +26,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #zookeeper
   config.vm.network :forwarded_port, :host => 2181, :guest => 2181
 
+  # kibana
+  config.vm.network :forwarded_port, :host => 49201, :guest => 49201
+
   # Set up a bunch of forwarded ports to expose docker containers through the host OS without hassle...
   # (49000..49900).each do |port|
   #  config.vm.network :forwarded_port, :host => port, :guest => port

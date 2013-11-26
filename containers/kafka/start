@@ -1,7 +1,7 @@
 
 	mkdir -p $APPS/kafka/data
 	mkdir -p $APPS/kafka/logs
-	sudo docker rm kafka > /dev/null 2>&1
+
 	KAFKA=$(docker run \
 		-d \
 		-p 9092:9092 \
@@ -10,4 +10,4 @@
 		-name kafka \
 		-link zookeeper:zookeeper \
 		relateiq/kafka)
-	echo "Started KAFKA in container $KAFKA"
+	echo "Started KAFKA in container $KAFKA with port 9092"

@@ -40,8 +40,13 @@ start(){
 
 	internal_registry/start
 	zookeeper/start
-	kafka/start
-	riak-cs/start
+	#kafka/start
+	#riak-cs/start
+
+	elasticsearch/start
+	logstash/start
+	kibana/start
+	
 	shipyard/start	
 
 	sleep 1

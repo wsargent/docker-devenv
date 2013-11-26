@@ -1,0 +1,8 @@
+
+SLAPD=$(docker run -v /data/ldap:/var/lib/ldap \
+           -e LDAP_DOMAIN=mycorp.com \
+           -e LDAP_ORGANISATION="My Mega Corporation" \
+           -e LDAP_ROOTPASS=s3cr3tpassw0rd \
+           -name slapd
+           -d nickstenning/slapd)
+echo "Started SLAPD in container $SLAPD"

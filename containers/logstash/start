@@ -1,2 +1,4 @@
 # # -e ES_HOST=1.2.3.4 -e ES_PORT=9200
-docker run -link elasticsearch:ES -name logstash logstash
+
+PROC=$(docker run -d -link elasticsearch:ES -name logstash internal_registry:5000/logstash)
+echo "Started LOGSTASH in container $PROC"

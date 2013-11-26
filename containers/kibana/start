@@ -1,2 +1,3 @@
-# -e ES_HOST=1.2.3.4 -e ES_PORT=9200
-docker run -link elasticsearch:ES -name KIBANA kibana
+PROC=$(docker run -d -link elasticsearch:ES -p 49201:80 -name kibana internal_registry:5000/kibana)
+
+echo "Started KIBANA in container $PROC with port 49201"

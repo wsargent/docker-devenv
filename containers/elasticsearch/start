@@ -1,1 +1,2 @@
-docker run -name elasticsearch elasticsearch
+PROC=$(docker run -d -name elasticsearch internal_registry:5000/elasticsearch)
+echo "Started ELASTICSEARCH in $PROC"
