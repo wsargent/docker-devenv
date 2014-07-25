@@ -5,7 +5,7 @@
 		-d \
 		-p 2181:2181 \
 		-v $APPS/zookeeper/logs:/logs \
-		-name zookeeper \
+		--name zookeeper \
 		relateiq/zookeeper)
 	echo "Started ZOOKEEPER in container $ZOOKEEPER"
 

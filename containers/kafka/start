@@ -7,7 +7,7 @@
 		-p 9092:9092 \
 		-v $APPS/kafka/data:/data \
 		-v $APPS/kafka/logs:/logs \
-		-name kafka \
-		-link zookeeper:zookeeper \
+		--name kafka \
+		--link zookeeper:zookeeper \
 		relateiq/kafka)
 	echo "Started KAFKA in container $KAFKA"
