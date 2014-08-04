@@ -1,21 +1,10 @@
 # Base image
-FROM ubuntu:12.04
-ENV REFRESHED_AT 2013-11-16
+FROM phusion/baseimage:0.9.12
+ENV HOME /root
+ENV REFRESHED_AT 2014-07-24
 
-RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list
-RUN apt-get update
-RUN apt-get upgrade -y
+RUN /etc/my_init.d/00_regen_ssh_host_keys.sh
 
-# Install common packages (from http://youtu.be/1Fm3MJhQZZg)
-run apt-get -y -q install aptitude sudo apt-utils ntp build-essential curl tzdata wget less dnsutils gzip netcat screen unzip sysstat git python-software-properties vim zsh
+CMD ["/sbin/my_init"]
 
-# set up timezone
-run echo 'Etc/UTC' > /etc/timezone
-run dpkg-reconfigure --frontend noninteractive tzdata
-
-# set up locale
-run locale-gen en_US.UTF-8
-run update-locale LANG=en_US.UTF-8
-ENV LC_ALL en_US.UTF-8
-ENV LANG en_US.UTF-8
-
+RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*

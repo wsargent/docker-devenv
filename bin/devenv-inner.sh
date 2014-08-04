@@ -29,7 +29,7 @@ install(){
 
 push() {
 	echo "Pushing images to registry:"
-	
+
 	/vagrant/bin/push.sh
 }
 
@@ -39,10 +39,7 @@ start(){
 	cd /vagrant/containers
 
 	internal_registry/start
-	zookeeper/start
-	kafka/start
-	riak-cs/start
-	shipyard/start	
+	shipyard/start
 
 	sleep 1
 }
