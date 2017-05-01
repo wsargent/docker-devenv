@@ -1,5 +1,0 @@
- sudo docker rm internal_registry > /dev/null 2>&1
-
- INTERNAL_REGISTRY=$(docker run --name internal_registry -d -p 5000:5000 samalba/docker-registry)
-
-echo "Started INTERNAL_REGISTRY in container $INTERNAL_REGISTRY"

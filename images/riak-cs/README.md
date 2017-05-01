@@ -1,1 +1,0 @@
-From https://github.com/jeffutter/riakcs-docker

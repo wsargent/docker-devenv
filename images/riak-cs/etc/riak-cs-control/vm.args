@@ -1,9 +1,0 @@
-+A 64
-+K true
-+S 1
-+W w
--env ERL_CRASH_DUMP /var/log/riak-cs/erl_crash.dump
--env ERL_FULLSWEEP_AFTER 0
--env ERL_MAX_PORTS 4096
--name riak-cs-control@127.0.0.1
--setcookie riak-cs-control
